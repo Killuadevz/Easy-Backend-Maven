@@ -48,7 +48,6 @@ Desenvolvido de forma autônoma, este projeto simula um ambiente de trabalho rea
 
 ---
 
----
 ## 🚠 **Requisitos do Banco de Dados**
 
 Para que o projeto funcione corretamente, é necessário configurar o banco de dados **MySQL** e criar a **view** e a **stored procedure** descritas abaixo.
