@@ -60,7 +60,7 @@ O banco de dados deve conter a tabela `contatos` com os seguintes campos:
 | `id`        | UUID        | Identificador único do contato.     |
 | `nome`      | VARCHAR     | Nome do contato.                   |
 | `numero`    | VARCHAR     | Número de telefone do contato.     |
-| `descricao` | TEXT        | Descrição adicional do contato.    |
+| `descricao` | VARCHAR     | Descrição adicional do contato.    |
 | `link`      | VARCHAR     | Link da foto do contato.           |
 
 ### **Criação da View**
