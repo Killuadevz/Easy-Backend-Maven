@@ -48,6 +48,49 @@ Desenvolvido de forma autônoma, este projeto simula um ambiente de trabalho rea
 
 ---
 
+---
+## 🚠 **Requisitos do Banco de Dados**
+
+Para que o projeto funcione corretamente, é necessário configurar o banco de dados **MySQL** e criar a **view** e a **stored procedure** descritas abaixo.
+
+### **Tabela Necessária**
+O banco de dados deve conter a tabela `contatos` com os seguintes campos:
+
+| Campo       | Tipo        | Descrição                           |
+|-------------|-------------|-------------------------------------|
+| `id`        | UUID        | Identificador único do contato.     |
+| `nome`      | VARCHAR     | Nome do contato.                   |
+| `numero`    | VARCHAR     | Número de telefone do contato.     |
+| `descricao` | TEXT        | Descrição adicional do contato.    |
+| `link`      | VARCHAR     | Link da foto do contato.           |
+
+### **Criação da View**
+
+A **view** `view_contatos_com_11` é utilizada para calcular o total de contatos que possuem "11" no número. Para criar a view, execute o seguinte comando no banco de dados:
+
+```sql
+CREATE VIEW view_contatos_com_11 AS
+SELECT COUNT(*) AS total_contatos_com_11
+FROM contatos
+WHERE numero LIKE '%11%';
+```
+
+### **Criação da Stored Procedure**
+
+A **stored procedure** `contar_contatos` é utilizada para calcular o total geral de contatos cadastrados. Para criá-la, execute o seguinte comando:
+
+```sql
+DELIMITER $$
+CREATE PROCEDURE contar_contatos()
+BEGIN
+    SELECT COUNT(*) AS total_contatos
+    FROM contatos;
+END $$
+DELIMITER ;
+```
+---
+
+
 ## 🗂️ **Estrutura do Projeto**
 
 - **`controller/`**: Define os endpoints REST da aplicação.
