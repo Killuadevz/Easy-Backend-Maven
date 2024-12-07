@@ -182,23 +182,15 @@ DELIMITER ;
 - **MySQL** configurado.
 
 ### **Passos para Rodar**
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/easy-backend.git](https://github.com/Killuadevz/Easy-Backend-Maven/tree/main/demo
-   cd Easy-Backend-Maven
-   ```
-2. Configure o arquivo `application.properties` com suas credenciais do banco de dados:
+
+1. Configure o arquivo `application.properties` com suas credenciais do banco de dados:
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/easy
    spring.datasource.username=seu_usuario
    spring.datasource.password=sua_senha
    spring.jpa.hibernate.ddl-auto=update
    ```
-3. Execute a aplicação com seu IDE preferido (como IntelliJ IDEA ou Eclipse) ou pelo terminal com:
-   ```bash
-   java -jar target/easy-backend.jar
-   ```
-4. Acesse a API na URL padrão: `http://localhost:8080/api`.
+2. Acesse a API na URL padrão: `http://localhost:8080/api`.
 
 ---
 
